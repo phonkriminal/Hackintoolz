@@ -6,22 +6,23 @@ from tkinter import filedialog
 from tkinter import messagebox
 from _extract import extract_tar
 
-url_path = 'https://raw.githubusercontent.com/phonkriminal/Hackinappz/main/src/Hackintools.tar'
+url_path = 'https://raw.githubusercontent.com/phonkriminal/Hackintoolz/main/Binaries/Hackintools.tar'
 install_path = ''
 source_dir = os.path.realpath(os.getcwd())
 print(source_dir)
 exit_code = 0
 exit_code = check_url(url_path)
 
-if (exit_code == 200):
-    msgbox = messagebox.askokcancel('Connection Found.', 'Would you proceed to installation?')
-    if (msgbox == False):
-        exit()
+
 
 x = 1
 root = tk.Tk()
 root.withdraw()
 
+if (exit_code == 200):
+    msgbox = messagebox.askokcancel('Connection Found.', 'Would you proceed to installation?')
+    if (msgbox == False):
+        exit()
 
 while x > 0:
     install_path = filedialog.askdirectory()

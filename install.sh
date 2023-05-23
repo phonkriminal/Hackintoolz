@@ -48,4 +48,4 @@ sudo () {
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 cd "${DIR}"
-sudo python3 _install.py
+sudo python3 scripts/_install.py
