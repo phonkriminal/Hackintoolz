@@ -1,3 +1,4 @@
+import shutil
 import tkinter as tk
 import os
 from _githubdownload import get_appfiles
@@ -46,4 +47,6 @@ print('Decompressing Files...')
 extract_tar(source_dir + '/Hackintools.tar', install_path)
     
 print('Completed.')
+os.remove(source_dir + '/Hackintools.tar')
+print('Binaries Removed.')
 exit()
